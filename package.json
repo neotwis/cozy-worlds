@@ -1,5 +1,5 @@
 {
-  "name": "cozy-world",
+  "name": "cozy-worlds",
   "version": "0.1.0",
   "description": "Deterministic, seed-based cozy world generator: terrain, biomes, weather, creatures, loot and events.",
   "type": "module",
