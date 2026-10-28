@@ -1,7 +1,7 @@
 import type { Region } from "../types/index.js";
 import { WaterKind } from "../types/index.js";
 
-/** Land cells with gentle slope are traversable. */
+
 export function computeTraversable(
   heightmap: Float32Array, water: Uint8Array, width: number, height: number, maxSlope: number,
 ): Uint8Array {

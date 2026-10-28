@@ -16,11 +16,7 @@ import type {
 } from "./types/index.js";
 import { WaterKind } from "./types/index.js";
 
-/**
- * A deterministic cozy world. Every generator draws from its own named stream,
- * so the same seed + options always produce the same output regardless of call order
- * across different generator kinds. Repeated calls of one kind advance that stream.
- */
+
 export class CozyWorld {
   readonly options: ResolvedOptions;
   readonly biomes: BiomeRegistry;

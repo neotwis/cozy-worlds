@@ -1,7 +1,3 @@
-/**
- * Radial falloff that is 1 at the center and decreases toward the edges.
- * `strength` 0 disables the effect; ~1.5 yields a single island.
- */
 export function islandMask(x: number, y: number, width: number, height: number, strength: number): number {
   if (strength <= 0) return 1;
   const cx = (width - 1) / 2;

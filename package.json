@@ -1,14 +1,31 @@
 {
   "name": "cozy-world",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Deterministic, seed-based cozy world generator: terrain, biomes, weather, creatures, loot and events.",
+  "keywords": [
+    "cozy-world",
+    "world-generator",
+    "procedural-generation",
+    "procedural-world",
+    "terrain-generator",
+    "terrain-generation",
+    "biome-generator",
+    "game-development",
+    "game-dev",
+    "game-world",
+    "seeded-random",
+    "typescript",
+    "javascript",
+    "open-world"
+  ],
   "type": "module",
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
   "files": [
@@ -18,12 +35,13 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.json && esbuild src/index.ts --bundle --platform=node --format=cjs --outfile=dist/index.cjs",
     "test": "vitest run"
   },
   "license": "MIT",
   "repository": "github:neotwis/cozy-worlds",
   "devDependencies": {
+    "esbuild": "^0.28.2",
     "typescript": "^7.0.2",
     "vitest": "^5.0.5"
   }
